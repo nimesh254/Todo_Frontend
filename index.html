@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>📝 My Todo List</h1>
+
+    <div class="todo-form">
+        <input type="text" id="title" placeholder="Todo title" />
+        <input type="text" id="description" placeholder="Description" />
+
+        <h4>Weekly Schedule</h4>
+        <div class="days">
+            <label><input type="checkbox" id="sunday"> Sun</label>
+            <label><input type="checkbox" id="monday"> Mon</label>
+            <label><input type="checkbox" id="tuesday"> Tue</label>
+            <label><input type="checkbox" id="wednesday"> Wed</label>
+            <label><input type="checkbox" id="thursday"> Thu</label>
+            <label><input type="checkbox" id="friday"> Fri</label>
+            <label><input type="checkbox" id="saturday"> Sat</label>
+        </div>
+
+        <button onclick="addTodo()">Add Todo</button>
+    </div>
+
+    <hr>
+    
+    <h2>📋 Todo List</h2>
+    <ul id="todoList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
