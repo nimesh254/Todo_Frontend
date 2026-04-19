@@ -1,4 +1,7 @@
-﻿const API_URL = "http://localhost:5226/api/Todo"; // ✅ correct port
+﻿const API_URL =
+    window.location.hostname === "localhost"
+        ? "http://localhost:5226/api/Todo"
+        : "https://todo-backend-r25z.onrender.com/api/Todo";
 
 async function loadTodos() {
     const response = await fetch(API_URL);
@@ -44,7 +47,7 @@ async function addTodo() {
         thursday: document.getElementById("thursday").checked,
         friday: document.getElementById("friday").checked,
         saturday: document.getElementById("saturday").checked,
-        isCompleted: false // ✅ add this (your model has it)
+        isCompleted: false
     };
 
     await fetch(API_URL, {
@@ -64,5 +67,4 @@ async function deleteTodo(id) {
     loadTodos();
 }
 
-// Load todos when page opens
 loadTodos();
